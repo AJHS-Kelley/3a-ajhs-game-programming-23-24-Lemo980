@@ -2,10 +2,10 @@
 import random
 #Variable Declarations
 weaponList = ["Wooden club", "Stone hammer", "Bone spear", "Magic staff of flame", "Steel greatsword", "Silver dagger", "Magical ice mace" ] #List of items in inventory
-hitPoints = 150.5 #How much total health a player has
+hitPoints = 150.5 #How much total health a player has -- ++ Why did you use a float value here? ++ 
 enemyList = ["Skeleton warrior", "Giant hog", "Dark mage", "Venomous serpent", "Goblin warrior", "Giant warrior", "Tree monster", "Werewolf"] #List of possible enemies
 playerAlive = True #Is the player alive or not
-playAgain = "y" #Does the player want to play again
+playAgain = "y" #Does the player want to play again -- ++ Have you considered using a Boolean instead? ++ 
 
 #Function Definitions
 
@@ -19,6 +19,8 @@ def weaponChoice(weaponList): #Allows the user to choose a weapon then returns c
         6: Silver dagger
         7: Magical ice mace""")
     equippedWeapon = weaponList[int(input("Please choose a weapon using a number 1 - 7 \n")) - 1]
+    # If the user enters 0 or less or greater than 7 your program will crash with 'Index Out of Range' error. 
+    # We are going to review try / catch / except next week, this would be a perfect place to use that to avoid the crash. 
     return equippedWeapon
 
 def damage(equippedWeapon, enemy): #Determines how much damage an enemy will take when hit with different weapons then returns damage value
@@ -143,7 +145,7 @@ def damage(equippedWeapon, enemy): #Determines how much damage an enemy will tak
             damage = 20
     return damage
 
-def enemyAttack(enemy): #Sets attack damage for each enemy then returns the enemy's attack
+def enemyAttack(enemy): #Sets attack damage for each enemy then returns the enemy's attack    
     if enemy == "Skeleton warrior":
         enemyAttack = 40
     elif enemy == "Giant hog":
@@ -184,7 +186,7 @@ while playAgain == "y": #Allows the user to decide to play again
     gameFunction(hitPoints, enemyAttack)
     print("Would you like to play again?")
     playAgain = input("Please type y for yes or n for no\n")
-    if playAgain == "n":
+    if playAgain == "n": # Consider using the .startswith("n") method in case they type 'no' or 'No', etc. 
         break
 
 #
