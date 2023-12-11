@@ -34,11 +34,11 @@ class Person: #Ckass names should be PascalCase
 
 
 #A class is a blueprint to make an object
-examplePerson1 = Person(37,"4'8\"", "black", "Gerald", 45, "April 03")
+examplePerson1 = Person(500,"4'8\"", "black", "Gerald", 45, "April 03")
 examplePerson2 = Person(5,"10'11\"", "red", "Harold", 863, "March 25")
 
 examplePerson2.tooOld()
-examplePerson2.tooHeavy()
+examplePerson1.tooHeavy()
 # print(examplePerson1)
 # print(examplePerson2)
 
@@ -46,3 +46,21 @@ examplePerson2.tooHeavy()
 # print(examplePerson1.weight)
 # examplePerson1.weight = 245
 # print(examplePerson1.weight)
+
+# Deleting properties from objects
+#print(examplePerson1.name)
+#del examplePerson1.name
+#print(examplePerson1.name)
+# del completely removes the property
+
+#Deleting whole objects
+print(examplePerson1)
+del examplePerson1
+print(examplePerson1)
+#Delete objects that are no longer needed to free up memory.
+
+class Food:
+    pass# I am not done yet, don't freak out.
+
+
+
