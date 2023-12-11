@@ -20,3 +20,7 @@ examplePerson2 = Person(43,"10'11\"", "red", "Harold", 863, "March 25")
 print(examplePerson1)
 print(examplePerson2)
 
+#Changing properties after creating an object
+print(examplePerson1.weight)
+examplePerson1.weight = 245
+print(examplePerson1.weight)
