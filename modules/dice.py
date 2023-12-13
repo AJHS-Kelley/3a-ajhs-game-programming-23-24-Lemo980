@@ -5,10 +5,8 @@ def rollDice(numRoll, sizeRoll):
     sum = 0
     while count < numRoll: 
         roll = random.randint (1, sizeRoll)
-        #print(f"Roll # {count}: {roll}\n")
         sum += roll
         count += 1
-    #print(sum)
     return sum
 
 def rollDicePrint(numRoll, sizeRoll):
@@ -27,9 +25,9 @@ def isExploding(roll, sizeRoll):
         isExploding = True
     else:
         isExploding = False
-    
     return isExploding
 
+#Confirmed working on 12/13/23
 def isDouble(roll1, roll2):
     if roll1 == roll2:
         isDouble = True
@@ -39,14 +37,13 @@ def isDouble(roll1, roll2):
 
 roll1 = rollDice(1,6)
 roll2 = rollDice(1,6)
-
 print(f"The first roll is {roll1} and the second roll is {roll2}. \n")
 
-if isDouble(roll1, roll2):
-    print("It's a double!")
+if isExploding(roll1, 6):
+    print("This die EXPLODED! Roll it again!")
+    
 else:
-    print("Womp womp, it's not a double")
-
+    print("This die did not explode.")
 
 
 
