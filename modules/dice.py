@@ -1,3 +1,4 @@
+#Dice roll module, Eliot Blanton, v1.0
 import random
 
 def rollDice(numRoll, sizeRoll):
@@ -41,7 +42,6 @@ print(f"The first roll is {roll1} and the second roll is {roll2}. \n")
 
 if isExploding(roll1, 6):
     print("This die EXPLODED! Roll it again!")
-    
 else:
     print("This die did not explode.")
 
