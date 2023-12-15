@@ -1,5 +1,5 @@
 #Dice roll module, Eliot Blanton, v1.0
-import random
+import random, time
 
 def rollDice(numRoll, sizeRoll):
     count = 0
@@ -10,7 +10,7 @@ def rollDice(numRoll, sizeRoll):
         count += 1
     return sum
 
-def rollDicePrint(numRoll, sizeRoll):
+def dispDice(numRoll, sizeRoll):
     count = 0
     sum = 0
     while count < numRoll: 
@@ -22,7 +22,7 @@ def rollDicePrint(numRoll, sizeRoll):
     return sum
 
 def isExploding(roll, sizeRoll):
-    if sizeRoll == roll:
+    if roll == sizeRoll:
         isExploding = True
     else:
         isExploding = False
@@ -36,18 +36,13 @@ def isDouble(roll1, roll2):
         isDouble = False
     return isDouble
 
-roll1 = rollDice(1,6)
-roll2 = rollDice(1,6)
-print(f"The first roll is {roll1} and the second roll is {roll2}. \n")
-
-if isExploding(roll1, 6):
-    print("This die EXPLODED! Roll it again!")
-else:
-    print("This die did not explode.")
 
 
+def getTime():
+    return time.time()
 
-
+def execTime(start, stop):
+    return f"Execution Time: {stop - start} seconds."
 
 
 
