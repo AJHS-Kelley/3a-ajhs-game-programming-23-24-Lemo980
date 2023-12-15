@@ -42,7 +42,7 @@ def getTime():
     return time.time()
 
 def execTime(start, stop):
-    return f"Execution Time: {stop - start} seconds."
+    return f"Execution Time: {stop - start}, seconds."
 
 
 
