@@ -1,0 +1,71 @@
+#DNA Replication Game, Eliot Blanton, v0.0a
+
+#import entire module
+import time, datetime #bringing the entire toolbox
+
+#import a specific method from a module
+from random import choice #bringing one specific tool
+
+dnaBases = ["A", "T", "G", "C"] #Adenine, Thymine, Guanine, and Cytocine
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
