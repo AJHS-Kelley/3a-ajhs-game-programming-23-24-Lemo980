@@ -51,7 +51,7 @@ def checkSequence(dnaSequence: str, rnaSequence: str) -> bool:
     return isMatch
 
 def calcScore(time: float, dnaSequence: str) -> int:
-    score = 0
+    score = 0.0
     if time < 1.0:
         score += 100000
     elif time < 2.0:
@@ -72,12 +72,19 @@ def calcScore(time: float, dnaSequence: str) -> int:
         score += 2000
     else:
         score += 0
-    return calcScore
 
-
-
-if len(dnaSequence) >= 30:
+    if len(dnaSequence) >= 30:
+    score *= 2.3
+    if len(dnaSequence) >= 25 :
     score *= 2.0
+    if len(dnaSequence) >= 20 :
+    score *= 1.8
+    if len(dnaSequence) >= 15 :
+    score *= 1.6
+    if len(dnaSequence) >= 10 :
+    score *= 1.4
+    if len(dnaSequence) >= 5 :
+    score *= 1.2
 
 
 
