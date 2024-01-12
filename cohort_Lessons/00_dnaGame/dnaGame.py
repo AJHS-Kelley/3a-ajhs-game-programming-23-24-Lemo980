@@ -36,7 +36,7 @@ def genRNA(dnaSequence: str) -> tuple:
 
 def checkSequence(dnaSequence: str, rnaSequence: str) -> bool:
     isMatch = False
-    for rnaBase, dnaBase in zip(rnaBase, dnaBase):
+    for rnaBase, dnaBase in zip(rnaSequence, dnaSequence):
         if rnaBase == "U" and dnaBase != "T":
             break
         elif rnaBase == "T" and dnaBase != "A":
@@ -45,17 +45,45 @@ def checkSequence(dnaSequence: str, rnaSequence: str) -> bool:
             break
         elif rnaBase == "C" and dnaBase != "G":
             break
-        elif rnaBase != "U" or "T" or "G" or "C":
-            break
         else:
             isMatch = True
 
-
-
     return isMatch
 
+def calcScore(time: float, dnaSequence: str) -> int:
+    score = 0
+    if time < 1.0:
+        score += 100000
+    elif time < 2.0:
+        score += 95000
+    elif time < 3.0:
+        score += 90000
+    elif time < 5.0:
+        score += 70000
+    elif time < 10.0:
+        score += 50000
+    elif time < 20.0:
+        score += 30000
+    elif time < 30.0:
+        score += 10000
+    elif time < 60.0:
+        score += 7000
+    elif time < 120.0:
+        score += 2000
+    else:
+        score += 0
+    return calcScore
 
 
+
+if len(dnaSequence) >= 30:
+    score *= 2.0
+
+
+
+
+
+ 
 
 
 
@@ -70,7 +98,7 @@ print(dna)
 rna = genRNA(dna)
 print(rna)
 
-print(checkSequence(dna, rna))
+print(checkSequence(dna, rna[0]))
 
 
 
