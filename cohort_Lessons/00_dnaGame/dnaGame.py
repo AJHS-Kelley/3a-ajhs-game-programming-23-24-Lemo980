@@ -9,7 +9,7 @@ from random import choice #bringing one specific tool
 dnaBases = ["A", "T", "G", "C"] #Adenine, Thymine, Guanine, and Cytocine
 
 def gameIntro() -> None:
-    pass
+    print("Welcome to the DNA sequence game!\nIn this game, you will match the RNA sequence to the DNA sequence you are given. \nU goes with T\nT goes with A\nG goes with C\nC goes with G")
 
 def genDNA() -> str:
     basesGenerated = 0
@@ -61,6 +61,8 @@ def checkSequence(dnaSequence: str, rnaSequence: str) -> bool:
 
 # dna = genDNA()
 # print(dna)
+
+gameIntro()
 
 dna = genDNA()
 print(dna)
