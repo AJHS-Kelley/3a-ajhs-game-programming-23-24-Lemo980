@@ -45,6 +45,8 @@ def checkSequence(dnaSequence: str, rnaSequence: str) -> bool:
             isMatch = False
         elif eachBase == "C" and dnaSequence != "G":
             isMatch = False
+        elif eachBase != "U" or "T" or "G" or "C":
+            isMatch = False
         else:
             isMatch = True
 
@@ -66,7 +68,7 @@ print(dna)
 rna = genRNA(dna)
 print(rna)
 
-
+print(checkSequence(dna, rna))
 
 
 
