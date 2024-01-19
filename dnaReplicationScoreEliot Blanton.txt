@@ -1,1 +1,16 @@
-Test Message
+
+Score generated on: 2024-01-19 12:56:53.860933 
+Time taken: 2.276639223098755 
+Player Name: Eliot Blanton 
+DNA sequence: T 
+RNA sequence: A 
+Score: 99000.00000000001
+
+
+Score generated on: 2024-01-19 12:57:23.909049 
+Time taken: 2.5183892250061035 
+Player Name: Eliot Blanton 
+DNA sequence: A 
+RNA sequence: U 
+Score: 99000.00000000001
+
