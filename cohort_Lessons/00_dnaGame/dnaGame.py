@@ -1,4 +1,4 @@
-#DNA Replication Game, Eliot Blanton, v0.0a
+#DNA Replication Game, Eliot Blanton, v0.0
 
 #import entire module
 import time, datetime #bringing the entire toolbox
@@ -50,25 +50,25 @@ def checkSequence(dnaSequence: str, rnaSequence: str) -> bool:
 
     return isMatch
 
-def calcScore(time: float, dnaSequence: str) -> int:
+def calcScore(rnaTime: float, dnaSequence: str) -> int:
     score = 0.0
-    if time < 1.0:
+    if rnaTime < 1.0:
         score += 100000
-    elif time < 2.0:
+    elif rnaTime < 2.0:
         score += 95000
-    elif time < 3.0:
+    elif rnaTime < 3.0:
         score += 90000
-    elif time < 5.0:
+    elif rnaTime < 5.0:
         score += 70000
-    elif time < 10.0:
+    elif rnaTime < 10.0:
         score += 50000
-    elif time < 20.0:
+    elif rnaTime < 20.0:
         score += 30000
-    elif time < 30.0:
+    elif rnaTime < 30.0:
         score += 10000
-    elif time < 60.0:
+    elif rnaTime < 60.0:
         score += 7000
-    elif time < 120.0:
+    elif rnaTime < 120.0:
         score += 2000
     else:
         score += 0
@@ -111,18 +111,15 @@ def saveScore(dna: str, rna: str, rnaTime: float, score: int) -> None:
     saveData.close()
 
 
-# dna = genDNA()
-# print(dna)
-
+#Function calls
 gameIntro()
-
 dna = genDNA()
-print(dna)
-
-rna = genRNA(dna)
-print(rna)
-
-print(checkSequence(dna, rna[0]))
+rna = doTranscription(dna)
+if checkSequence(dna, rna[0]):
+    score = calcScore(rna[1], rna[0])
+    saveScore(dna, rna[0], rna[1], score)
+else: 
+    print("Your RNA sequence did not correctly match. Please try again")
 
 
 
