@@ -46,5 +46,21 @@ BORDERCOLOE = BRIGHTBLUE
 #Font size
 BASICFONTSIZE = 20 #Measured in pixels
 
+#buttons and messages
+BUTTONCOLOR = WHITE
+BUTTONTEXTCOLOR = BLACK
+MESSAGECOLOR = WHITE
+
+
+
+
+
+
+
+
+
+
+
+
 
 
