@@ -11,6 +11,17 @@
 
 #Divide and conquer method -- break down the problem into smaller problems, then solve those problems
 
+#Module imports -- import whole module
+import pygame, sys, random
+#sys module gives access to system level functions including open/closing programs, etc.
+
+#Module imports -- specific functions
+from pygame.locals import *
+#this line allows us to call functions diewctly instead of pygame.function()
+#we can just write function()
+# * in this line is a wildcard and means any or all
+# EX: delete myGameFiles*
+
 #board setup data
 BOARDWIDTH = 4 #columns
 BOARDHIGHT = 4 #rows
@@ -52,8 +63,47 @@ BUTTONTEXTCOLOR = BLACK
 MESSAGECOLOR = WHITE
 
 #window margins
-XMARGIN =
-YMARGIN =
+XMARGIN = int ((WINDOWWIDTH - (TILESIZE * BOARDWIDTH + (BOARDWIDTH -1)))/2)
+YMARGIN = int ((WINDOWHEIGHT - (TILESIZE * BOARDHIGHT + (BOARDHIGHT -1)))/2)
+
+#Directional assignments
+UP = 'up'
+DOWN = 'down'
+LEFT = 'left'
+RIGHT = 'right'
+
+#--------------------MAIN GAME LOOP-------------------------+
+def main():
+    #global keyword makes Python use the same variable in entire program
+    global FPSCLOCK, DISPLAYSURF, BASIC_FONT, RESET_SURF, RESET_RECT, NEW_SURF, NEW_RECT, SOLVE_SURF, SOLVE_RECT
+    #surf is the general abbreviation for 'surface'
+    #a 'surface' in pygame can be used to draw graphics, text, or simple colors
+    #The easiest way to think about a surface is a whiteboard
+
+    #Rect is the abbreviation for rectangle
+
+    #start the pygame module itself. this line of code is required for pygame to work
+    
+    pygame.init()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
