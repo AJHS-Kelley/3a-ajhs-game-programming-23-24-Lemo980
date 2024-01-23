@@ -11,10 +11,16 @@
 
 #Divide and conquer method -- break down the problem into smaller problems, then solve those problems
 
+#board setup data
+BOARDWIDTH = 4 #columns
+BOARDHIGHT = 4 #rows
 
+#tile size
+TILESIZE = 80 #measured in pixels
 
-
-
+#Window size
+WINDOWWIDTH = 640 #measured in pixels
+WINDOWHEIGHT = 480 #measured in pixels
 
 
 
