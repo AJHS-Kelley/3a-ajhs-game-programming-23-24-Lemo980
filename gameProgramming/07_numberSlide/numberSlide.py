@@ -84,7 +84,9 @@ def main():
 
     #start the pygame module itself. this line of code is required for pygame to work
     
-    pygame.init()
+    pygame.init()#Start pygame module
+    FPSCLOCK = pygame.time.Clock() #establish the start to track FPS
+    DISPLAYSURF = pygame.display.set_mode((WINDOWWIDTH, WINDOWHEIGHT)) #creates actual game window
 
 
 
