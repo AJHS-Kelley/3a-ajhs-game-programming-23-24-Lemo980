@@ -91,6 +91,26 @@ def main():
     time.sleep(5)
 
 
+#End the game
+def terminate():
+    pygame.quit()#this will end all pygame events
+    sys.exit()#quits program using OS command
+
+# check if the player quits
+def checkForQuit() -> None:
+    for event in pygame.event.get(quit):
+        terminate()#terminate game if quit event is present
+    for event in pygame.event.get(KEYUP): #triggers when the specific key is released
+        if event.key == K_ESCAPE: #trigger if escape key is released
+            terminate()
+        pygame.event.post(event)# put other events at the back of the que.
+
+
+
+
+
+
+
 main()
 
 
