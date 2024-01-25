@@ -105,9 +105,26 @@ def checkForQuit() -> None:
             terminate()
         pygame.event.post(event)# put other events at the back of the que.
 
+def getLeftTopOfTile(tileX: int, tileY: int) -> tuple:
+    left = XMARGIN =(tileX * TILESIZE) + (tileX - 1)
+    top = YMARGIN =(tileY * TILESIZE) + (tileY - 1)
+    return (top, left)
+
+def getSpotClick(board: list, x: int, y: int) -> tuple:
+    for tileX in range(len(board)): #loop through each tile on the x axis once
+        for tileY in range(len(board[0])):
+            left, top = getLeftTopOfTile(tileX, tileY) #Tell us where the tile is
+            tileRect = pygame.rect(left, top, TILESIZE, TILESIZE)
+            #pygame.Rect(left, top, width, height)
+            if tileRect.collidepoint(x, y): #does out object hit something at (x, y)?
+                #.collidepoint is basically battleship
+                return (tileX, tileY) #if we hit, return the location
+    return(None, None) # if we miss, return None, None.
 
 
 
+
+    return(None, None)
 
 
 
