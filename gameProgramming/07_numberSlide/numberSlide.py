@@ -12,7 +12,7 @@
 #Divide and conquer method -- break down the problem into smaller problems, then solve those problems
 
 #Module imports -- import whole module
-import pygame, sys, random
+import pygame, sys, random, time
 #sys module gives access to system level functions including open/closing programs, etc.
 
 #Module imports -- specific functions
@@ -87,7 +87,11 @@ def main():
     pygame.init()#Start pygame module
     FPSCLOCK = pygame.time.Clock() #establish the start to track FPS
     DISPLAYSURF = pygame.display.set_mode((WINDOWWIDTH, WINDOWHEIGHT)) #creates actual game window
+    pygame.display.set_caption('Eliot\'s sliding puzzle game')
+    time.sleep(5)
 
+
+main()
 
 
 
