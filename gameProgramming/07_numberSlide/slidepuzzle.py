@@ -134,7 +134,7 @@ def getStartingBoard():
     # Return a board data structure with tiles in the solved state.
     # For example, if BOARDWIDTH and BOARDHEIGHT are both 3, this function
     # returns [[1, 4, 7], [2, 5, 8], [3, 6, BLANK]]
-    counter = 1
+    counter = 0
     board = []
     for x in range(BOARDWIDTH):
         column = []
