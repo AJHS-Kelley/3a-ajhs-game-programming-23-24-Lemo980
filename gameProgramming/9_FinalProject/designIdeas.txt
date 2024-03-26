@@ -1,0 +1,17 @@
+game type: dungeon crawler / rpg
+
+Levels: two different areas to go to with visually different enemies and items
+    --typical dark stone dungeon
+    --jungle themed area
+
+enemies / obstacles: Skeletons, werewolves, goblins, giants, wild dogs, snakes, mages(fire and ice), and other monsters/enemies that the player will have to face
+
+Items, equipment, and objects: weapons such as swords, daggers, hammers, staffs, etc..., gold to spend at a shop to buy weapons and health items, potions to buff the player or debuff enemies(poison, stun, instant damage, weakness etc...).
+
+Win condition: reach the treasure at the end of the dungeon (after a set number of enemies have been killed)
+
+loss condition: player runs out of health
+
+difficulty changes:
+    --higher health enemies, more damage delt by enemies, more enemies have to be killed to reach end goal, less gold per kill
+
