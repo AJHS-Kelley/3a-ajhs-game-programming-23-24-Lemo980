@@ -15,3 +15,16 @@ loss condition: player runs out of health
 difficulty changes:
     --higher health enemies, more damage delt by enemies, more enemies have to be killed to reach end goal, less gold per kill
 
+control scheme: Mouse for most/all actions with buttons on the screen to click
+
+
+
+https://www.gamedevmarket.net/asset/4-animated-fish-in-4-colors
+https://www.gamedevmarket.net/asset/pixel-monster-pack-6806
+https://www.gamedevmarket.net/asset/free-jrpg-undead-monsters-pack
+https://www.gamedevmarket.net/asset/11-animated-golems
+https://www.gamedevmarket.net/asset/rpp-battle-system-1-2-7507
+https://www.gamedevmarket.net/asset/prehistoric-platformer-1-and-2-5284
+https://www.gamedevmarket.net/asset/animated-knight-character-pack
+https://www.gamedevmarket.net/asset/goblins-free-animated-pack
+https://www.gamedevmarket.net/asset/pixel-art-animated-slime
