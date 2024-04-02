@@ -12,7 +12,6 @@
 # print the correct order to the screen
 
 a, b, c = input().split()
-letterList = input().split()
 
 a = int(a)
 b = int(b)
@@ -25,3 +24,15 @@ if c < b:
 if a > b:
     a, b = b, a
 
+order = input()
+myString = ""
+
+for i in range(len(order)):
+    if order[i] == "A":
+        myString += str(a) + " "
+    elif order[i] == "B":
+        myString += str(b) + " "
+    else:
+        myString += str(c) + " "
+
+print(myString)
