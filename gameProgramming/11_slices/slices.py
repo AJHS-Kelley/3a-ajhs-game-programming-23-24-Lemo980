@@ -28,3 +28,17 @@ print(string1[:12])#start at beginning, stop one before stop value
 
 #slice whole string
 print(string1[:])
+
+#negative slices
+print(alphabet[-7:-2])
+
+#password verification
+if password[:-1] == " ":
+    password = password[:-1]
+
+#removing uneeded information
+name = Mr.Sqidward
+if name[1:4] == "Mrs.":
+    name = name[5:]
+elif name[1:3] == "Mr.":
+    name = name[4:]
