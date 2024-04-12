@@ -21,7 +21,7 @@ sky_surface = pygame.image.load('gameProgramming/08_ultimateIntroPygame/graphics
 ground_surface = pygame.image.load('gameProgramming/08_ultimateIntroPygame/graphics/ground.png').convert()
 
 
-#score_surf = test_font.render('My game', False, (64, 64, 64))
+score_surf = test_font.render('My game', False, (64, 64, 64))
 #score_rect = score_surf.get_rect(center = (400,50))
 
 snail_surface = pygame.image.load('gameProgramming/08_ultimateIntroPygame/graphics/snail/snail1.png').convert_alpha()

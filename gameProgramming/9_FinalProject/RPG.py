@@ -9,8 +9,8 @@ pygame.display.set_caption('Dungeon crawler')
 clock = pygame.time.Clock()
 game_active = True
 startTime = 0
-
-titleScreen = pygame.image.load('gameProgramming\9_FinalProject\graphics\dungeonBackground.png').convert()
+pixelFont = pygame.font.Font('gameProgramming/9_FinalProject/graphics/fonts/Pixeltype.ttf', 50)
+titleScreen = pygame.image.load('gameProgramming\9_FinalProject\graphics\TitleBG.png').convert()
 
 jungleButton = pygame.image.load('gameProgramming\9_FinalProject\graphics\JungleButton.png').convert()
 dungeonButton = pygame.image.load('gameProgramming\9_FinalProject\graphics\DungeonButton.png').convert()
@@ -19,8 +19,8 @@ dButtonRect = dungeonButton.get_rect()
 
 while game_active:
     screen.blit(titleScreen, (0,0))
-    screen.blit(dungeonButton, (800, 200))
-    screen.blit(jungleButton, (100, 200))
+    screen.blit(dungeonButton, (50, 600))
+    screen.blit(jungleButton, (800, 600))
     pygame.display.update()
 
 
