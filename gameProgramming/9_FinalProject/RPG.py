@@ -12,16 +12,32 @@ startTime = 0
 pixelFont = pygame.font.Font('gameProgramming/9_FinalProject/graphics/fonts/Pixeltype.ttf', 50)
 titleScreen = pygame.image.load('gameProgramming\9_FinalProject\graphics\TitleBG.png').convert()
 
-jungleButton = pygame.image.load('gameProgramming\9_FinalProject\graphics\JungleButton.png').convert()
-dungeonButton = pygame.image.load('gameProgramming\9_FinalProject\graphics\DungeonButton.png').convert()
-jButtonRect = jungleButton.get_rect()
-dButtonRect = dungeonButton.get_rect()
 
-while game_active:
-    screen.blit(titleScreen, (0,0))
-    screen.blit(dungeonButton, (50, 600))
-    screen.blit(jungleButton, (800, 600))
-    pygame.display.update()
+def startScreen():
+    jungleButton = pygame.image.load('gameProgramming\9_FinalProject\graphics\JungleButton.png').convert()
+    dungeonButton = pygame.image.load('gameProgramming\9_FinalProject\graphics\DungeonButton.png').convert()
+    jButtonRect = jungleButton.get_rect(center = (850, 600))
+    dButtonRect = dungeonButton.get_rect(center = (150, 600))
+    while game_active:
+            screen.blit(titleScreen, (0,0))
+            screen.blit(dungeonButton, dButtonRect)
+            screen.blit(jungleButton, jButtonRect)
+            if event.type == pygame.MOUSEBUTTONUP
+                if jButtonRect.collidepoint(event.pos):
 
 
 
+
+
+
+
+
+
+
+
+
+
+            pygame.display.update()
+
+
+startScreen()
