@@ -44,8 +44,8 @@ def startScreen():
     
     easyButton = pygame.image.load('gameProgramming\9_FinalProject\graphics\easyButton.png').convert()
     hardButton = pygame.image.load('gameProgramming\9_FinalProject\graphics\hardButton.png').convert()
-    easyButtonRect = jungleButton.get_rect(center = (850, 600))
-    hardButtonRect = dungeonButton.get_rect(center = (130, 600))
+    easyButtonRect = easyButton.get_rect(center = (850, 600))
+    hardButtonRect = hardButton.get_rect(center = (130, 600))
     
 
     while True:
