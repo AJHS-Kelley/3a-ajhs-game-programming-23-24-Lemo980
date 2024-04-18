@@ -1,5 +1,10 @@
 #Dungeon crawler by Eliot Blanton, v1.0
 
+
+#Next task: Fix organization and break startScreen function into multiple smaller functions
+
+
+
 import pygame
 from sys import exit
 
@@ -9,7 +14,7 @@ pygame.display.set_caption('Dungeon crawler')
 clock = pygame.time.Clock()
 game_active = True
 startTime = 0
-pixelFont = pygame.font.Font('gameProgramming/9_FinalProject/graphics/fonts/Pixeltype.ttf', 50)
+pixelFont = pygame.font.Font('gameProgramming/9_FinalProject/graphics/fonts/Pixeltype.ttf', 100)
 # create a surface to draw the font. use .render() to put font on surface 
 titleScreen = pygame.image.load('gameProgramming\9_FinalProject\graphics\TitleBG.png').convert()
 titleScreenRect = titleScreen.get_rect(center = (512, 393))
@@ -33,6 +38,8 @@ def startScreen():
     easyButtonRect = easyButton.get_rect(center = (890, 600))
     hardButtonRect = hardButton.get_rect(center = (130, 600))
 
+    chooseDiffTxt = pixelFont.render('Choose Your Difficulty', False, (0, 0, 0))
+    chooseDiffTxtRect = chooseDiffTxt.get_rect(center = (512, 393))
     while mapChosen == False:
 
         screen.blit(titleScreen, (0,0))
@@ -59,6 +66,7 @@ def startScreen():
     while difficultyChosen == False:
         screen.blit(easyButton, easyButtonRect)
         screen.blit(hardButton, hardButtonRect)
+        screen.blit(chooseDiffTxt, chooseDiffTxtRect)
         pygame.display.update()
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
