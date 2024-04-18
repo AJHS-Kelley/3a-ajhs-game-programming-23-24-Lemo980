@@ -1,4 +1,4 @@
-#Dungeon crawler by Eliot Blanton, v1.0
+#Dungeon crawler by Eliot Blanton, v1.2
 
 
 #Next task: Fix organization and break startScreen function into multiple smaller functions
