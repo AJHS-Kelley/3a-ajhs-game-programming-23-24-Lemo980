@@ -13,17 +13,21 @@ pixelFont = pygame.font.Font('gameProgramming/9_FinalProject/graphics/fonts/Pixe
 titleScreen = pygame.image.load('gameProgramming\9_FinalProject\graphics\TitleBG.png').convert()
 titleScreenRect = titleScreen.get_rect(center = (512, 393))
 
-
-
 def startScreen():
     difficulty = ""
     Map = ""
     mapChosen = False
     difficultyChosen = False
+
     jungleButton = pygame.image.load('gameProgramming\9_FinalProject\graphics\JungleButton.png').convert()
     dungeonButton = pygame.image.load('gameProgramming\9_FinalProject\graphics\DungeonButton.png').convert()
     jButtonRect = jungleButton.get_rect(center = (850, 600))
     dButtonRect = dungeonButton.get_rect(center = (150, 600))
+
+    easyButton = pygame.image.load('gameProgramming\9_FinalProject\graphics\easyButton.png').convert()
+    hardButton = pygame.image.load('gameProgramming\9_FinalProject\graphics\hardButton.png').convert()
+    easyButtonRect = easyButton.get_rect(center = (890, 600))
+    hardButtonRect = hardButton.get_rect(center = (130, 600))
 
     while mapChosen == False:
 
@@ -48,13 +52,6 @@ def startScreen():
                     mapChosen = True
             pygame.display.update()
     
-    
-    easyButton = pygame.image.load('gameProgramming\9_FinalProject\graphics\easyButton.png').convert()
-    hardButton = pygame.image.load('gameProgramming\9_FinalProject\graphics\hardButton.png').convert()
-    easyButtonRect = easyButton.get_rect(center = (890, 600))
-    hardButtonRect = hardButton.get_rect(center = (130, 600))
-    
-
     while difficultyChosen == False:
         screen.blit(easyButton, easyButtonRect)
         screen.blit(hardButton, hardButtonRect)
@@ -83,8 +80,6 @@ diffAndMap = startScreen()
 difficulty = diffAndMap[0]
 Map = diffAndMap[1]
 
-print(difficulty)
-print(Map)
 
 def shop(coins):
     pass
