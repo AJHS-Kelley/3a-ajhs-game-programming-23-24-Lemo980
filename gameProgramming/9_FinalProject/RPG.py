@@ -10,8 +10,10 @@ clock = pygame.time.Clock()
 game_active = True
 startTime = 0
 pixelFont = pygame.font.Font('gameProgramming/9_FinalProject/graphics/fonts/Pixeltype.ttf', 50)
+# create a surface to draw the font. use .render() to put font on surface 
 titleScreen = pygame.image.load('gameProgramming\9_FinalProject\graphics\TitleBG.png').convert()
 titleScreenRect = titleScreen.get_rect(center = (512, 393))
+
 
 def startScreen():
     difficulty = ""
@@ -19,11 +21,13 @@ def startScreen():
     mapChosen = False
     difficultyChosen = False
 
+    # selectLvL():
     jungleButton = pygame.image.load('gameProgramming\9_FinalProject\graphics\JungleButton.png').convert()
     dungeonButton = pygame.image.load('gameProgramming\9_FinalProject\graphics\DungeonButton.png').convert()
     jButtonRect = jungleButton.get_rect(center = (850, 600))
     dButtonRect = dungeonButton.get_rect(center = (150, 600))
 
+    # selectDiff() 
     easyButton = pygame.image.load('gameProgramming\9_FinalProject\graphics\easyButton.png').convert()
     hardButton = pygame.image.load('gameProgramming\9_FinalProject\graphics\hardButton.png').convert()
     easyButtonRect = easyButton.get_rect(center = (890, 600))
