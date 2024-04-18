@@ -14,12 +14,17 @@ titleScreen = pygame.image.load('gameProgramming\9_FinalProject\graphics\TitleBG
 titleScreenRect = titleScreen.get_rect(center = (512, 393))
 
 
+
 def startScreen():
+    difficulty = ""
+    Map = ""
     mapChosen = False
+    difficultyChosen = False
     jungleButton = pygame.image.load('gameProgramming\9_FinalProject\graphics\JungleButton.png').convert()
     dungeonButton = pygame.image.load('gameProgramming\9_FinalProject\graphics\DungeonButton.png').convert()
     jButtonRect = jungleButton.get_rect(center = (850, 600))
     dButtonRect = dungeonButton.get_rect(center = (150, 600))
+
     while mapChosen == False:
 
         screen.blit(titleScreen, (0,0))
@@ -34,21 +39,23 @@ def startScreen():
             if event.type == pygame.MOUSEBUTTONDOWN:
                 if dButtonRect.collidepoint(event.pos):
                     screen.fill((100,0,100), titleScreenRect)
+                    Map = "dungeon"
                     mapChosen = True
 
                 elif jButtonRect.collidepoint(event.pos):
                     screen.fill((200,200,50), titleScreenRect)
+                    Map = "jungle"
                     mapChosen = True
             pygame.display.update()
     
     
     easyButton = pygame.image.load('gameProgramming\9_FinalProject\graphics\easyButton.png').convert()
     hardButton = pygame.image.load('gameProgramming\9_FinalProject\graphics\hardButton.png').convert()
-    easyButtonRect = easyButton.get_rect(center = (850, 600))
+    easyButtonRect = easyButton.get_rect(center = (890, 600))
     hardButtonRect = hardButton.get_rect(center = (130, 600))
     
 
-    while True:
+    while difficultyChosen == False:
         screen.blit(easyButton, easyButtonRect)
         screen.blit(hardButton, hardButtonRect)
         pygame.display.update()
@@ -59,16 +66,22 @@ def startScreen():
             if event.type == pygame.MOUSEBUTTONDOWN:
                 if easyButtonRect.collidepoint(event.pos):
                     screen.fill((0,255,0), titleScreenRect)
-                    mapChosen = True
+                    difficulty = "easy"
+                    difficultyChosen = True
+                    
 
                 elif hardButtonRect.collidepoint(event.pos):
                     screen.fill((255,0,0), titleScreenRect)
-                    mapChosen = True
+                    difficulty = "hard"
+                    difficultyChosen = True
+                    
+                    
             pygame.display.update()
-
+    return (difficulty, Map)
 
 
 
 
 
 startScreen()
+
