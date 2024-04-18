@@ -79,9 +79,12 @@ def startScreen():
             pygame.display.update()
     return (difficulty, Map)
 
+diffAndMap = startScreen()
+difficulty = diffAndMap[0]
+Map = diffAndMap[1]
 
+print(difficulty)
+print(Map)
 
-
-
-startScreen()
-
+def shop(coins):
+    pass
