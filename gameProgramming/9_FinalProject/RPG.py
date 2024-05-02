@@ -1,4 +1,4 @@
-#Dungeon crawler by Eliot Blanton, v1.2
+#Dungeon crawler by Eliot Blanton, v1.5
 
 import pygame
 from sys import exit
