@@ -1,10 +1,5 @@
 #Dungeon crawler by Eliot Blanton, v1.2
 
-
-#Next task: Fix organization and break startScreen function into multiple smaller functions
-
-
-
 import pygame
 from sys import exit
 
@@ -14,32 +9,19 @@ pygame.display.set_caption('Dungeon crawler')
 clock = pygame.time.Clock()
 game_active = True
 startTime = 0
-pixelFont = pygame.font.Font('gameProgramming/9_FinalProject/graphics/fonts/Pixeltype.ttf', 100)
+pixelFont = pygame.font.Font('9_FinalProject\graphics\_fonts\Pixeltype.ttf', 100)
 # create a surface to draw the font. use .render() to put font on surface 
-titleScreen = pygame.image.load('gameProgramming\9_FinalProject\graphics\TitleBG.png').convert()
+titleScreen = pygame.image.load('9_FinalProject\graphics\TitleBG.png').convert()
 titleScreenRect = titleScreen.get_rect(center = (512, 393))
 
-
-def startScreen():
-    difficulty = ""
-    Map = ""
-    mapChosen = False
-    difficultyChosen = False
-
+def selectMap():
     # selectLvL():
-    jungleButton = pygame.image.load('gameProgramming\9_FinalProject\graphics\JungleButton.png').convert()
-    dungeonButton = pygame.image.load('gameProgramming\9_FinalProject\graphics\DungeonButton.png').convert()
+    mapChosen = False
+    Map = ""
+    jungleButton = pygame.image.load('9_FinalProject\graphics\JungleButton.png').convert()
+    dungeonButton = pygame.image.load('9_FinalProject\graphics\DungeonButton.png').convert()
     jButtonRect = jungleButton.get_rect(center = (850, 600))
     dButtonRect = dungeonButton.get_rect(center = (150, 600))
-
-    # selectDiff() 
-    easyButton = pygame.image.load('gameProgramming\9_FinalProject\graphics\easyButton.png').convert()
-    hardButton = pygame.image.load('gameProgramming\9_FinalProject\graphics\hardButton.png').convert()
-    easyButtonRect = easyButton.get_rect(center = (890, 600))
-    hardButtonRect = hardButton.get_rect(center = (130, 600))
-
-    chooseDiffTxt = pixelFont.render('Choose Your Difficulty', False, (0, 0, 0))
-    chooseDiffTxtRect = chooseDiffTxt.get_rect(center = (512, 393))
     while mapChosen == False:
 
         screen.blit(titleScreen, (0,0))
@@ -62,6 +44,18 @@ def startScreen():
                     Map = "jungle"
                     mapChosen = True
             pygame.display.update()
+    return Map
+
+def selectDiff():
+    easyButton = pygame.image.load('9_FinalProject\graphics\easyButton.png').convert()
+    hardButton = pygame.image.load('9_FinalProject\graphics\hardButton.png').convert()
+    easyButtonRect = easyButton.get_rect(center = (890, 600))
+    hardButtonRect = hardButton.get_rect(center = (130, 600))
+    chooseDiffTxt = pixelFont.render('Choose Your Difficulty', False, (0, 0, 0))
+    chooseDiffTxtRect = chooseDiffTxt.get_rect(center = (512, 393))
+    difficulty = ""
+    difficultyChosen = False
+    
     
     while difficultyChosen == False:
         screen.blit(easyButton, easyButtonRect)
@@ -86,11 +80,10 @@ def startScreen():
                     
                     
             pygame.display.update()
-    return (difficulty, Map)
+    return (difficulty)
 
-diffAndMap = startScreen()
-difficulty = diffAndMap[0]
-Map = diffAndMap[1]
+Map = selectMap()
+difficulty = selectDiff()
 
 
 def shop(coins):
