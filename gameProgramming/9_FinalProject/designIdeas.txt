@@ -28,3 +28,9 @@ https://www.gamedevmarket.net/asset/animated-knight-character-pack
 https://www.gamedevmarket.net/asset/goblins-free-animated-pack
 https://www.gamedevmarket.net/asset/pixel-art-animated-slime
 https://www.gamedevmarket.net/asset/dungeon-tiles-32x32
+
+weapon sprites:
+hammer
+sword
+silver dagger
+magic staff
